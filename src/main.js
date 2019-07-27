@@ -8,9 +8,15 @@ import 'element-ui/lib/theme-chalk/index.css'
 import echarts from 'echarts'
 import store from './components/myVuex/vuex'
 Vue.prototype.$echarts = echarts
+import VueClipboard from 'vue-clipboard2'
+import echarts from 'echarts'
+
+
 Vue.config.productionTip = false
 
 Vue.use(ElementUI)
+Vue.use(VueClipboard)
+Vue.prototype.$echarts = echarts
 
 /* eslint-disable no-new */
 
