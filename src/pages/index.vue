@@ -117,6 +117,12 @@ import abnormal from "../components/abnormal";
 export default {
   name: "Index",
   components: {
+    all,
+    service,
+    bandwidth,
+    user,
+    hardware,
+    warn,
     abnormal
   },
   data() {
