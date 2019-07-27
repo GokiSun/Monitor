@@ -8,7 +8,7 @@
       label-width="100px"
       class="demo-ruleForm"
     >
-      <h4>IBMS智能楼宇</h4>
+      <h4>智能运维预警平台</h4>
       <div class="login">
           <el-form-item label="账户" prop="acount">
           <el-input type="text" v-model="ruleForm.acount" autocomplete="off">
