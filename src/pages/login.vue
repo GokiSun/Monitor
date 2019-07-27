@@ -1,4 +1,15 @@
 <template>
+  <div class="container">
+    <el-form
+      :model="ruleForm"
+      status-icon
+      :rules="rules"
+      ref="ruleForm"
+      label-width="100px"
+      class="demo-ruleForm"
+    >
+      <h4>智能运维预警平台</h4>
+      <div class="login">
   <div>
     <div class="header">
       <!-- <h1 style="font-size: 3em;">CooCaa</h1>
