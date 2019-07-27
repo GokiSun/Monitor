@@ -1,15 +1,4 @@
 <template>
-  <div class="container">
-    <el-form
-      :model="ruleForm"
-      status-icon
-      :rules="rules"
-      ref="ruleForm"
-      label-width="100px"
-      class="demo-ruleForm"
-    >
-      <h4>智能运维预警平台</h4>
-      <div class="login">
   <div>
     <div class="header">
       <!-- <h1 style="font-size: 3em;">CooCaa</h1>
@@ -18,32 +7,32 @@
     </div>
     <div style="background: #ff5300;padding-bottom: 100px;">
       <div class="container">
-      <el-form
-        :model="ruleForm"
-        status-icon
-        :rules="rules"
-        ref="ruleForm"
-        label-width="100px"
-        class="demo-ruleForm"
-      >
-        <h4>检测系统</h4>
-        <div class="login">
-          <el-form-item label="账户" prop="acount">
-            <el-input type="text" v-model="ruleForm.acount" autocomplete="off"></el-input>
-          </el-form-item>
-          <el-form-item label="密码" prop="pass">
-            <el-input type="password" v-model="ruleForm.pass" autocomplete="off"></el-input>
-          </el-form-item>
-          <el-form-item label="确认密码" prop="checkPass">
-            <el-input type="password" v-model="ruleForm.checkPass" autocomplete="off"></el-input>
-          </el-form-item>
-          <el-form-item>
-            <el-button type="primary" @click="submitForm('ruleForm')">提交</el-button>
-            <el-button @click="resetForm('ruleForm')">重置</el-button>
-          </el-form-item>
-        </div>
-      </el-form>
-    </div>
+        <el-form
+          :model="ruleForm"
+          status-icon
+          :rules="rules"
+          ref="ruleForm"
+          label-width="100px"
+          class="demo-ruleForm"
+        >
+          <h4>检测系统</h4>
+          <div class="login">
+            <el-form-item label="账户" prop="acount">
+              <el-input type="text" v-model="ruleForm.acount" autocomplete="off"></el-input>
+            </el-form-item>
+            <el-form-item label="密码" prop="pass">
+              <el-input type="password" v-model="ruleForm.pass" autocomplete="off"></el-input>
+            </el-form-item>
+            <el-form-item label="确认密码" prop="checkPass">
+              <el-input type="password" v-model="ruleForm.checkPass" autocomplete="off"></el-input>
+            </el-form-item>
+            <el-form-item>
+              <el-button type="primary" @click="submitForm('ruleForm')">提交</el-button>
+              <el-button @click="resetForm('ruleForm')">重置</el-button>
+            </el-form-item>
+          </div>
+        </el-form>
+      </div>
     </div>
     <div class="canvas-wrap">
       <canvas id="canvas"></canvas>
@@ -127,11 +116,11 @@ export default {
       for (let i = 0; i < 3; i++) {
         let temp = new this.wave(colours[i], 1, 5);
       }
-      var temp = setInterval(()=>{
+      var temp = setInterval(() => {
         try {
-          this.update()
+          this.update();
         } catch (error) {
-          clearInterval(temp)
+          clearInterval(temp);
         }
       }, 16);
     },
@@ -225,12 +214,12 @@ export default {
 
 <style>
 .header {
-    background-color: #ff5300;
-    /* padding: 1rem; */
-    color: #fff;
-    text-align: center;
-    position: relative;
-  }
+  background-color: #ff5300;
+  /* padding: 1rem; */
+  color: #fff;
+  text-align: center;
+  position: relative;
+}
 .container {
   user-select: none;
   background: #fff;
