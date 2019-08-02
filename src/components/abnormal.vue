@@ -2,7 +2,6 @@
   <div class="ab-container">
     <div class="ab-header">
       <el-input type="text" v-model="abSearchContent"></el-input>
-      <el-button @click="abSearch">查询</el-button>
     </div>
     <div class="ab-main">
       <el-table :data="currentTableData" style="width: 100%">
@@ -116,6 +115,11 @@ export default {
   },
   mounted() {
     this.currentTableData = this.tableData;
+  },
+  watch: {
+    abSearchContent() {
+      this.abSearch()
+    }
   }
 };
 </script>

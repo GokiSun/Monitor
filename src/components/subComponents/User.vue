@@ -135,7 +135,7 @@ export default {
   }
   .el-message-box{
     width:70%;
-    height: 50%;
+    min-height: 50%;
   }
   
 </style>

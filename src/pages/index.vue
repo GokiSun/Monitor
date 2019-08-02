@@ -6,7 +6,31 @@
       </el-button>
       <img class="logo" src="@/assets/logo_white.png" alt="coocaa" />
       <div class="header-right">
-        <el-dropdown trigger="click" style="margin-right: 30px;">
+        <el-menu
+          :default-active="1"
+          class="el-menu-demo"
+          mode="horizontal"
+          background-color="#383D41"
+          text-color="#fff"
+        >
+          <el-submenu index="1">
+            <template slot="title">我的工作台</template>
+            <el-menu-item index="1-1">选项1</el-menu-item>
+            <el-menu-item index="1-2">选项2</el-menu-item>
+            <el-menu-item index="1-3">选项3</el-menu-item>
+            <el-submenu index="1-4">
+              <template slot="title">选项4</template>
+              <el-menu-item index="1-4-1">选项1</el-menu-item>
+            </el-submenu>
+          </el-submenu>
+          <el-submenu index="2">
+            <template slot="title">处理中心</template>
+            <el-menu-item index="2-1">选项1</el-menu-item>
+            <el-menu-item index="2-2">选项2</el-menu-item>
+          </el-submenu>
+        </el-menu>
+        <div class="line"></div>
+        <!-- <el-dropdown trigger="click" style="margin-right: 30px;">
           <span class="el-dropdown-link icon-right">
             10.121.144.1
             <i class="el-icon-arrow-down el-icon--right"></i>
@@ -14,14 +38,15 @@
           <el-dropdown-menu slot="dropdown">
             <el-dropdown-item>port：3000</el-dropdown-item>
             <el-dropdown-item>上次登录时间：2019-07-12 16：00</el-dropdown-item>
+            <el-dropdown-item></el-dropdown-item>
             <el-dropdown-item divided @click="logout">
               <el-button class="logout" @click="logout">注销</el-button>
             </el-dropdown-item>
           </el-dropdown-menu>
-        </el-dropdown>
-        <el-button class="shareLink" @click="shareLink">
+        </el-dropdown>-->
+        <!-- <el-button class="shareLink" @click="shareLink">
           <i class="el-icon-share"></i>
-        </el-button>
+        </el-button>-->
         <!-- <el-dropdown trigger="click">
           <span class="el-dropdown-link icon-right">
             <i class="el-icon-share"></i>
@@ -66,11 +91,7 @@
                   ></i>
                   <span slot="title">{{menuItems.title}}</span>
                 </el-menu-item>
-                <el-submenu
-                  :key="menuItems.id"
-                  v-else
-                  :index="menuItems.id"
-                >
+                <el-submenu :key="menuItems.id" v-else :index="menuItems.id">
                   <template>
                     <template slot="title">
                       <i :class="`el-icon-${menuItems.icon}`"></i>
@@ -107,12 +128,12 @@
 </template>
 
 <script>
-import all from '../components/Charts/All'
-import service from '../components/subComponents/Service'
-import bandwidth from '../components/subComponents/BandWidth'
-import user from '../components/subComponents/User'
-import hardware from '../components/subComponents/HardWare'
-import warn from '../components/subComponents/Warning'
+import all from "../components/Charts/All";
+import service from "../components/subComponents/Service";
+import bandwidth from "../components/subComponents/BandWidth";
+import user from "../components/subComponents/User";
+import hardware from "../components/subComponents/HardWare";
+import warn from "../components/subComponents/Warning";
 import abnormal from "../components/abnormal";
 export default {
   name: "Index",
@@ -309,6 +330,7 @@ export default {
 }
 .header-right {
   float: right;
+  margin-right: 100px;
 }
 .icon-right {
   cursor: pointer;
@@ -335,7 +357,7 @@ export default {
   width: auto;
   min-width: 400px;
 }
-.el-menu-vertical-demo{
+.el-menu-vertical-demo {
   overflow: hidden;
 }
 </style>
